@@ -4,6 +4,8 @@ Default permissions for the plugin
 
 - `allow-ping`
 - `allow-get-printers`
+- `allow-get-printers-by-name`
+- `allow-print-pdf`
 
 ## Permission Table
 

@@ -10,6 +10,8 @@ mod desktop;
 #[cfg(mobile)]
 mod mobile;
 
+mod fsys;
+mod declare;
 mod commands;
 mod error;
 mod models;
@@ -35,16 +37,13 @@ impl<R: Runtime, T: Manager<R>> crate::PrinterpdfExt<R> for T {
 
 /// Initializes the plugin.
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
-  if cfg!(windows) {
-    window::init_windows();
-  }
   Builder::new("printerpdf")
-    .invoke_handler(tauri::generate_handler![commands::ping, commands::get_printers])
+    .invoke_handler(tauri::generate_handler![commands::ping,commands::get_printers_by_name, commands::get_printers, commands::print_pdf])
     .setup(|app, api| {
-        if cfg!(desktop) {
-           window::init(app, api);
-        }
-        Ok(())
+      if cfg!(desktop) {
+        window::init(app, api);
+      }
+      Ok(())
     })
     .build()
 }

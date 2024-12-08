@@ -1,6 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
+import { printers } from "tauri-plugin-printerpdf";
 import "./App.css";
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("plugin:printerpdf|get_printers"));
+    const list = await printers();
+    setGreetMsg(JSON.stringify(list, null, 2));
   }
 
   return (
