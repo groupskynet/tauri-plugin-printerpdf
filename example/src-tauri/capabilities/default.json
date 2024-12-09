@@ -4,6 +4,8 @@
   "description": "Capability for the main window",
   "windows": ["main"],
   "permissions": [
+    "printerpdf:allow-print-pdf",
+    "printerpdf:allow-get-printers-by-name",
     "printerpdf:allow-get-printers",
     "printerpdf:allow-ping",
     "core:default",

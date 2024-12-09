@@ -45,6 +45,32 @@ Denies the get_printers command without any pre-configured scope.
 <tr>
 <td>
 
+`printerpdf:allow-get-printers-by-name`
+
+</td>
+<td>
+
+Enables the get_printers_by_name command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`printerpdf:deny-get-printers-by-name`
+
+</td>
+<td>
+
+Denies the get_printers_by_name command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
 `printerpdf:allow-ping`
 
 </td>
@@ -64,6 +90,32 @@ Enables the ping command without any pre-configured scope.
 <td>
 
 Denies the ping command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`printerpdf:allow-print-pdf`
+
+</td>
+<td>
+
+Enables the print_pdf command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`printerpdf:deny-print-pdf`
+
+</td>
+<td>
+
+Denies the print_pdf command without any pre-configured scope.
 
 </td>
 </tr>
