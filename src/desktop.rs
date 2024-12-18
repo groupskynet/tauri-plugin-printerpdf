@@ -2,13 +2,13 @@ use serde::de::DeserializeOwned;
 use tauri::{plugin::PluginApi, AppHandle, Runtime};
 
 use crate::models::*;
-use crate::window;
+use crate::windows;
 
 pub fn init<R: Runtime, C: DeserializeOwned>(
   app: &AppHandle<R>,
   _api: PluginApi<R, C>,
 ) -> crate::Result<Printerpdf<R>> {
-  window::init_windows();
+  windows::init_windows();
   Ok(Printerpdf(app.clone()))
 }
 

@@ -1,8 +1,15 @@
 {
   "name": "tauri-plugin-printerpdf",
   "version": "0.1.0",
-  "author": "You",
   "description": "",
+  "author": {
+    "name": "Camilo Colon",
+    "url": "https://github.com/groupskynet/tauri-plugin-printerpdf.git"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "types": "./dist-js/index.d.ts",
   "main": "./dist-js/index.cjs",
