@@ -59,7 +59,7 @@ pub(crate) fn get_printers_by_name(printername: String) -> String {
   return "Unsupported OS".to_string();
 }
 
-#[command(rename_all = "snake_case")]
+#[command]
 pub async fn print_pdf(
   id: String,
   path: String,
